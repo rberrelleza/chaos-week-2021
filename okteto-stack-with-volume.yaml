@@ -1,0 +1,25 @@
+name: node-graphql-server
+endpoints:
+- path: /
+  service: gateway
+  port: 4000
+services:
+  gateway:
+    image: okteto.dev/graphql-gateway
+    build: gateway
+    ports:
+      - 4000
+  books:
+    image: okteto.dev/graphql-service
+    build: books
+    ports:
+      - 4001
+  redis:
+    image: redis
+    ports:
+      - 6379
+    volumes:
+      - redis:/data
+volumes:
+  redis:
+    size: 1Gi

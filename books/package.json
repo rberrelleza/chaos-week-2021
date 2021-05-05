@@ -1,0 +1,20 @@
+{
+  "name": "service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@apollo/federation": "^0.22.0",
+    "apollo-server": "^2.22.2",
+    "graphql": "^15.5.0",
+    "ioredis": "^4.27.2",
+    "uuid": "^8.3.2"
+  }
+}
